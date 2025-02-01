@@ -1,30 +1,49 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+- story: Greet and ask about Shades
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: ask_about_shades
+  - action: utter_about_shades
 
-- story: sad path 1
+- story: User asks about services
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: ask_services
+  - action: utter_services
 
-- story: sad path 2
+- story: User inquires about website development
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: ask_website_development
+  - action: utter_website_development
+
+- story: User asks about mobile app development
+  steps:
+  - intent: ask_mobile_apps
+  - action: utter_mobile_apps
+
+- story: User asks about AI solutions
+  steps:
+  - intent: ask_ai_solutions
+  - action: utter_ai_solutions
+
+- story: User asks about IT staffing
+  steps:
+  - intent: ask_staffing
+  - action: utter_staffing
+
+- story: User wants branding services
+  steps:
+  - intent: ask_branding
+  - action: utter_branding
+
+- story: User requests consultation
+  steps:
+  - intent: request_consultation
+  - action: utter_request_consultation
+
+- story: User ends conversation
+  steps:
+  - intent: goodbye
   - action: utter_goodbye

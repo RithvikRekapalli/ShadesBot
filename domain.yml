@@ -1,33 +1,77 @@
 version: "3.1"
 
+
 intents:
   - greet
+  - ask_about_shades
+  - ask_services
+  - ask_website_development
+  - ask_mobile_apps
+  - ask_ai_solutions
+  - ask_staffing
+  - ask_branding
+  - request_consultation
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+  - nlu_fallback
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hello! Welcome to Shades LLC. How can I assist you today?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_about_shades:
+    - text: "Shades LLC helps businesses go digital by building fast, scalable, and innovative software solutions. We offer website development, mobile apps, AI automation, branding, and IT staffing."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_services:
+    - text: "We provide:\n
+      1️⃣ Website & Software Development\n
+      2️⃣ Mobile App Development\n
+      3️⃣ AI & Automation Solutions\n
+      4️⃣ Branding & Digital Presence\n
+      5️⃣ IT Staffing & Hiring\n
+      Which service would you like to know more about?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_website_development:
+    - text: "We build custom websites, e-commerce platforms, and scalable web applications. We work with technologies like React, WordPress, and Shopify."
+
+  utter_mobile_apps:
+    - text: "We develop mobile apps using React Native and Flutter, and we specialize in both iOS & Android app development."
+
+  utter_ai_solutions:
+    - text: "We provide AI-driven solutions, including AI-powered chatbots, business automation, and data analytics."
+
+  utter_staffing:
+    - text: "We help businesses find top IT talent, including developers, designers, and project managers. We offer full-time hiring, freelance contracts, and dedicated remote teams."
+
+  utter_branding:
+    - text: "We help businesses create a strong digital presence through branding, logo design, social media marketing, SEO, and content creation."
+
+  utter_request_consultation:
+    - text: "We'd love to discuss your project! Please visit our website [insert link] or email us at [your email]."
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Goodbye! Feel free to reach out anytime."
+
+  utter_fallback:
+    - text: "I'm not sure I understand. Can you rephrase your question?"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, here to assist you with Shades LLC services."
+
+actions:
+  - utter_greet
+  - utter_about_shades
+  - utter_services
+  - utter_website_development
+  - utter_mobile_apps
+  - utter_ai_solutions
+  - utter_staffing
+  - utter_branding
+  - utter_request_consultation
+  - utter_goodbye
+  - utter_fallback
+  - utter_iamabot
+
 
 session_config:
   session_expiration_time: 60
