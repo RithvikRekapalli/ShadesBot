@@ -1,0 +1,27 @@
+# 🛑 Ignore Virtual Environment
+venv/
+.env
+
+# 🛑 Ignore Rasa Temporary Files
+.rasa/
+
+# 🛑 Ignore Cache and Compiled Python Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🛑 Ignore Rasa Model Files (They can be retrained)
+models/
+*.tar.gz
+
+# 🛑 Ignore Local Database (Only needed locally)
+rasa.db
+tracker.db
+
+# 🛑 Ignore Log Files
+logs/
+*.log
+
+# 🛑 Ignore Credentials (Sensitive API Keys)
+credentials.yml
