@@ -1,49 +1,24 @@
 version: "3.1"
 
 stories:
-- story: Greet and ask about Shades
+- story: User selects a service option
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_about_shades
-  - action: utter_about_shades
+  - intent: select_option
+  - action: action_handle_service_selection
 
-- story: User asks about services
+- story: User returns to main menu
   steps:
-  - intent: ask_services
-  - action: utter_services
+  - intent: return_to_main_menu
+  - action: utter_return_to_main_menu
 
-- story: User inquires about website development
+- story: Bot challenge
   steps:
-  - intent: ask_website_development
-  - action: utter_website_development
+  - intent: bot_challenge
+  - action: utter_iamabot
 
-- story: User asks about mobile app development
-  steps:
-  - intent: ask_mobile_apps
-  - action: utter_mobile_apps
-
-- story: User asks about AI solutions
-  steps:
-  - intent: ask_ai_solutions
-  - action: utter_ai_solutions
-
-- story: User asks about IT staffing
-  steps:
-  - intent: ask_staffing
-  - action: utter_staffing
-
-- story: User wants branding services
-  steps:
-  - intent: ask_branding
-  - action: utter_branding
-
-- story: User requests consultation
-  steps:
-  - intent: request_consultation
-  - action: utter_request_consultation
-
-- story: User ends conversation
+- story: User says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye

@@ -1,77 +1,106 @@
 version: "3.1"
 
-
 intents:
   - greet
-  - ask_about_shades
-  - ask_services
-  - ask_website_development
-  - ask_mobile_apps
-  - ask_ai_solutions
-  - ask_staffing
-  - ask_branding
-  - request_consultation
+  - select_option
+  - return_to_main_menu
   - goodbye
   - bot_challenge
   - nlu_fallback
 
+slots:
+  option:
+    type: text
+    mappings:
+      - type: from_text
+
 responses:
   utter_greet:
-    - text: "Hello! Welcome to Shades LLC. How can I assist you today?"
+    - text: |
+        👋 Hello! Welcome to Shades LLC. How can I assist you today?
+        Please choose an option by typing the corresponding number:
+        1️⃣ Website & Software Development
+        2️⃣ Mobile App Development
+        3️⃣ AI & Automation Solutions
+        4️⃣ Branding & Digital Presence
+        5️⃣ IT Staffing & Hiring
+        🔄 Type '0' to return to the main menu anytime.
 
-  utter_about_shades:
-    - text: "Shades LLC helps businesses go digital by building fast, scalable, and innovative software solutions. We offer website development, mobile apps, AI automation, branding, and IT staffing."
+  utter_website_options:
+    - text: |
+        🌐 You selected **Website & Software Development**. What do you need?
+        1️⃣ Business Websites
+        2️⃣ E-Commerce Platforms
+        3️⃣ Custom Web Applications
+        🔄 Type '0' to return to the main menu.
 
-  utter_services:
-    - text: "We provide:\n
-      1️⃣ Website & Software Development\n
-      2️⃣ Mobile App Development\n
-      3️⃣ AI & Automation Solutions\n
-      4️⃣ Branding & Digital Presence\n
-      5️⃣ IT Staffing & Hiring\n
-      Which service would you like to know more about?"
+  utter_mobile_options:
+    - text: |
+        📱 You selected **Mobile App Development**. What do you need?
+        1️⃣ iOS App Development
+        2️⃣ Android App Development
+        3️⃣ Cross-Platform Apps
+        🔄 Type '0' to return to the main menu.
 
-  utter_website_development:
-    - text: "We build custom websites, e-commerce platforms, and scalable web applications. We work with technologies like React, WordPress, and Shopify."
+  utter_ai_options:
+    - text: |
+        🤖 You selected **AI & Automation Solutions**. What do you need?
+        1️⃣ AI-Powered Chatbots
+        2️⃣ Business Process Automation
+        3️⃣ Data Analytics & ML Models
+        🔄 Type '0' to return to the main menu.
 
-  utter_mobile_apps:
-    - text: "We develop mobile apps using React Native and Flutter, and we specialize in both iOS & Android app development."
+  utter_branding_options:
+    - text: |
+        🎨 You selected **Branding & Digital Presence**. What do you need?
+        1️⃣ Logo & Branding
+        2️⃣ Social Media Marketing
+        3️⃣ SEO Optimization
+        🔄 Type '0' to return to the main menu.
 
-  utter_ai_solutions:
-    - text: "We provide AI-driven solutions, including AI-powered chatbots, business automation, and data analytics."
+  utter_staffing_options:
+    - text: |
+        👨‍💻 You selected **IT Staffing & Hiring**. What do you need?
+        1️⃣ IT Staff Augmentation
+        2️⃣ Dedicated Development Teams
+        3️⃣ Recruitment & Hiring Services
+        🔄 Type '0' to return to the main menu.
 
-  utter_staffing:
-    - text: "We help businesses find top IT talent, including developers, designers, and project managers. We offer full-time hiring, freelance contracts, and dedicated remote teams."
-
-  utter_branding:
-    - text: "We help businesses create a strong digital presence through branding, logo design, social media marketing, SEO, and content creation."
-
-  utter_request_consultation:
-    - text: "We'd love to discuss your project! Please visit our website [insert link] or email us at [your email]."
+  utter_return_to_main_menu:
+    - text: |
+        🔄 Returning to the main menu...
+        Please choose an option:
+        1️⃣ Website & Software Development
+        2️⃣ Mobile App Development
+        3️⃣ AI & Automation Solutions
+        4️⃣ Branding & Digital Presence
+        5️⃣ IT Staffing & Hiring
+        (Type a number to continue)
+        🔄 Type '0' to return to the main menu anytime.
 
   utter_goodbye:
-    - text: "Goodbye! Feel free to reach out anytime."
+    - text: "👋 Goodbye! Feel free to reach out anytime."
 
   utter_fallback:
-    - text: "I'm not sure I understand. Can you rephrase your question?"
+    - text: |
+        ⚠️ Sorry, I didn't understand that. 
+        Please select a number from the menu or type '0' to return to the main menu.
 
   utter_iamabot:
-    - text: "I am a bot, here to assist you with Shades LLC services."
+    - text: "🤖 I am a bot, here to assist you with Shades LLC services!"
 
 actions:
   - utter_greet
-  - utter_about_shades
-  - utter_services
-  - utter_website_development
-  - utter_mobile_apps
-  - utter_ai_solutions
-  - utter_staffing
-  - utter_branding
-  - utter_request_consultation
+  - utter_website_options
+  - utter_mobile_options
+  - utter_ai_options
+  - utter_branding_options
+  - utter_staffing_options
+  - utter_return_to_main_menu
   - utter_goodbye
   - utter_fallback
   - utter_iamabot
-
+  - action_handle_service_selection
 
 session_config:
   session_expiration_time: 60

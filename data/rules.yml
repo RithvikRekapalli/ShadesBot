@@ -21,3 +21,13 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: Allow returning to the main menu anytime
+  steps:
+  - intent: return_to_main_menu
+  - action: utter_return_to_main_menu
+
+- rule: Handle service selection (numbered options)
+  steps:
+  - intent: select_option
+  - action: action_handle_service_selection

@@ -6,67 +6,31 @@ nlu:
     - Hi
     - Hello
     - Hey there
-    - Greetings
+    - Good morning
     - What's up?
+    - Hi there
+    - Hey
 
-- intent: ask_about_shades
+- intent: select_option
   examples: |
-    - What does Shades LLC do?
-    - Can you tell me about Shades?
-    - What services do you provide?
-    - What kind of business is Shades?
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - I choose 1
+    - Option 2
+    - Number 3
+    - Pick 4
+    - Select 5
 
-- intent: ask_services
+- intent: return_to_main_menu
   examples: |
-    - What services do you offer?
-    - Tell me about your services.
-    - What can you help with?
-    - Can you develop websites and apps?
-    - Do you provide AI solutions?
-
-- intent: ask_website_development
-  examples: |
-    - Do you build websites?
-    - I need a website for my business.
-    - Can you create an e-commerce site?
-    - Do you develop Shopify stores?
-    - I need a corporate website.
-
-- intent: ask_mobile_apps
-  examples: |
-    - Can you develop a mobile app?
-    - I want an iOS and Android app.
-    - Do you build cross-platform apps?
-    - Can you make an MVP app for startups?
-
-- intent: ask_ai_solutions
-  examples: |
-    - Do you offer AI-powered solutions?
-    - Can you build an AI chatbot?
-    - Do you provide automation tools?
-    - I need machine learning models.
-    - Can you automate business processes?
-
-- intent: ask_staffing
-  examples: |
-    - Do you provide IT staffing services?
-    - I need to hire a software developer.
-    - Can you help with recruitment?
-    - I want to hire a freelance developer.
-
-- intent: ask_branding
-  examples: |
-    - Can you help with branding?
-    - I need a logo for my business.
-    - Do you do social media marketing?
-    - I need SEO services for my website.
-
-- intent: request_consultation
-  examples: |
-    - I want to book a consultation.
-    - How do I get started?
-    - Can I talk to an expert?
-    - I need help with my project.
+    - 0
+    - main menu
+    - go back
+    - return to main menu
+    - restart
 
 - intent: goodbye
   examples: |
@@ -74,3 +38,18 @@ nlu:
     - Goodbye
     - See you later
     - Thanks, that was helpful.
+    - I am done
+
+- intent: bot_challenge
+  examples: |
+    - Are you a bot?
+    - Who are you?
+    - Are you human?
+    - Are you real?
+
+- intent: nlu_fallback
+  examples: |
+    - I don't get it
+    - What are you saying?
+    - That's confusing
+    - This doesn't make sense
