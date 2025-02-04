@@ -44,3 +44,4 @@
 
 action_endpoint:
   url: "http://localhost:5055/webhook"
+  python: "/usr/bin/python3"  # Ensure Python 3 is used

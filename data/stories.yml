@@ -18,7 +18,4 @@ stories:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- story: User says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+# Removed 'User says goodbye' story to avoid rule conflicts

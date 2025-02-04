@@ -18,13 +18,13 @@ responses:
   utter_greet:
     - text: |
         👋 Hello! Welcome to Shades LLC. How can I assist you today?
-        Please choose an option by typing the corresponding number:
+        Please choose an option by typing or saying the corresponding number:
         1️⃣ Website & Software Development
         2️⃣ Mobile App Development
         3️⃣ AI & Automation Solutions
         4️⃣ Branding & Digital Presence
         5️⃣ IT Staffing & Hiring
-        🔄 Type '0' to return to the main menu anytime.
+        🔄 Say or type '0' to return to the main menu anytime.
 
   utter_website_options:
     - text: |
@@ -32,7 +32,7 @@ responses:
         1️⃣ Business Websites
         2️⃣ E-Commerce Platforms
         3️⃣ Custom Web Applications
-        🔄 Type '0' to return to the main menu.
+        🔄 Say or type '0' to return to the main menu.
 
   utter_mobile_options:
     - text: |
@@ -40,7 +40,7 @@ responses:
         1️⃣ iOS App Development
         2️⃣ Android App Development
         3️⃣ Cross-Platform Apps
-        🔄 Type '0' to return to the main menu.
+        🔄 Say or type '0' to return to the main menu.
 
   utter_ai_options:
     - text: |
@@ -48,7 +48,7 @@ responses:
         1️⃣ AI-Powered Chatbots
         2️⃣ Business Process Automation
         3️⃣ Data Analytics & ML Models
-        🔄 Type '0' to return to the main menu.
+        🔄 Say or type '0' to return to the main menu.
 
   utter_branding_options:
     - text: |
@@ -56,7 +56,7 @@ responses:
         1️⃣ Logo & Branding
         2️⃣ Social Media Marketing
         3️⃣ SEO Optimization
-        🔄 Type '0' to return to the main menu.
+        🔄 Say or type '0' to return to the main menu.
 
   utter_staffing_options:
     - text: |
@@ -64,7 +64,7 @@ responses:
         1️⃣ IT Staff Augmentation
         2️⃣ Dedicated Development Teams
         3️⃣ Recruitment & Hiring Services
-        🔄 Type '0' to return to the main menu.
+        🔄 Say or type '0' to return to the main menu.
 
   utter_return_to_main_menu:
     - text: |
@@ -75,16 +75,20 @@ responses:
         3️⃣ AI & Automation Solutions
         4️⃣ Branding & Digital Presence
         5️⃣ IT Staffing & Hiring
-        (Type a number to continue)
-        🔄 Type '0' to return to the main menu anytime.
+        (Say or type a number to continue)
+        🔄 Say or type '0' to return to the main menu anytime.
 
   utter_goodbye:
-    - text: "👋 Goodbye! Feel free to reach out anytime."
+    - text: |
+        👋 Goodbye! Thank you for using Shades LLC chatbot. Before you go, we'd love your feedback!
+        👉 [Click here to provide feedback](https://your-feedback-form.com)
+        
+        Have a great day! 😊
 
   utter_fallback:
     - text: |
         ⚠️ Sorry, I didn't understand that. 
-        Please select a number from the menu or type '0' to return to the main menu.
+        Please select a number from the menu or say 'Main Menu' to return.
 
   utter_iamabot:
     - text: "🤖 I am a bot, here to assist you with Shades LLC services!"
@@ -100,7 +104,9 @@ actions:
   - utter_goodbye
   - utter_fallback
   - utter_iamabot
+  - action_handle_voice_input
   - action_handle_service_selection
+  - action_session_end
 
 session_config:
   session_expiration_time: 60
